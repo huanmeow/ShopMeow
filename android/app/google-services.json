@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "359954230001",
+    "project_id": "shopmeow-5d175",
+    "storage_bucket": "shopmeow-5d175.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359954230001:android:8300021d6c563c42bf9750",
+        "android_client_info": {
+          "package_name": "com.example.shopmeo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqaQqGk5X2nyyrpeuwFIGPbvAT_222LuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
