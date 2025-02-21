@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../models/account.dart';
@@ -11,16 +10,14 @@ class AccountDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(account.username)),
+      appBar: AppBar(title: Text(account.id)),
       body: Column(
         children: [
           // Hiển thị hình ảnh tài khoản
           // ...
           // Hiển thị thông tin chi tiết
-          Text('Tên tài khoản: ${account.username}'),
-          Text('Level: ${account.level}'),
+          Text('Tên tài khoản: ${account.id}'),
           Text('Giá: ${account.price}'),
-          // ...
           // Nút mua
           ElevatedButton(
             onPressed: () {

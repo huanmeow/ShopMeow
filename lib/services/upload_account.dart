@@ -1,30 +1,45 @@
-import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-Future<void> uploadAccountToFirebase(Map<String, dynamic> accountData) async {
-}
+class Account {
+  final String id;
+  final int price;
+  final String description;
+  final List<String> imageUrls;
 
-class MyWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Map<String, dynamic> accountData = {
-          'gameName': 'Liên Quân Mobile',
-          'username': 'nguyenvana',
-          'level': 100,
-          'price': 100000,
-          'description': 'Tài khoản cực vip',
-          'sellerId': 'user123',
-          'images': ['imgaes/accone/acc1.1', 'imgaes/accone/acc1.2'],
-        };
+  Account({
+    required this.id,
+    required this.price,
+    required this.description,
+    required this.imageUrls,
+  });
 
-        uploadAccountToFirebase(accountData).then((_) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Tải lên thành công')));
-        }).catchError((error) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Lỗi tải lên: $error')));
-        });
-      },
-      child: Text('Tải lên tài khoản'),
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'price': price,
+      'description': description,
+      'imageUrls': imageUrls,
+    };
+  }
+
+  factory Account.fromFirestore(DocumentSnapshot doc) {
+    Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+    return Account(
+      id: doc.id,
+      price: data['price'] as int,
+      description: data['description'] as String,
+      imageUrls: List<String>.from(data['imageUrls']),
     );
   }
 }
+Account newAccount = Account(
+  id: '#1111',
+  price: 250000,
+  description: 'Tài khoản VIP',
+  imageUrls: [
+    'images/accone/acc2.1.jpeg',
+    'images/accone/acc2.2.jpeg',
+    'images/accone/acc2.3.jpeg',
+  ],
+);
+CollectionReference accounts = FirebaseFirestore.instance.collection('Account');

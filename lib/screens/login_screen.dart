@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shopmeo/screens/register_screen.dart';
 import '../PhuongAn2/Profile/chinhsach.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../services/auth_service.dart';
 import 'home_screen.dart';
 
@@ -13,16 +12,8 @@ class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
-Future<void> _launchURL(String url) async {
-  Uri uri = Uri.parse(url);
-  if (await canLaunchUrl(uri)) {
-    await launchUrl(uri);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
-class _LoginScreenState extends State<LoginScreen>with SingleTickerProviderStateMixin {
+class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -88,7 +79,9 @@ class _LoginScreenState extends State<LoginScreen>with SingleTickerProviderState
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterScreen())); // Chuyển sang màn hình đăng nhập
+                    Navigator.push(context,
+                        MaterialPageRoute(
+                            builder: (context)=>RegisterScreen()));
                   },
                   child: const Text('Chưa có tài khoản? Đăng kí ngay'),
                 ),
@@ -113,7 +106,6 @@ class _LoginScreenState extends State<LoginScreen>with SingleTickerProviderState
                             text: " Chính Sách Bảo Mật",
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                               // _launchURL('https://lienquan.garena.vn/dieu-chinh-can-bang-20-2-pb-can-nguyen-tien-canh/');
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Chinhsachbaomat()));
                               },
                             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)
@@ -142,10 +134,8 @@ class _LoginScreenState extends State<LoginScreen>with SingleTickerProviderState
         _isLoading = false;
       });
       if (user != null) {
-        // Đăng nhập thành công, chuyển sang màn hình chính
         Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
       } else {
-        // Đăng nhập thất bại, hiển thị thông báo lỗi
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Đăng nhập thất bại')),
         );

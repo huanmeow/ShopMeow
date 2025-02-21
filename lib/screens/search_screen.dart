@@ -13,12 +13,12 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final _searchController = TextEditingController();
-  List<Account> _searchResults = []; // Danh sách kết quả tìm kiếm
+  List<Account> _searchResults = [];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Tìm kiếm')),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -30,7 +30,6 @@ class _SearchScreenState extends State<SearchScreen> {
                 suffixIcon: Icon(Icons.search),
               ),
               onChanged: (value) {
-                // Thực hiện tìm kiếm khi người dùng nhập
                 _searchAccounts(value);
               },
             ),

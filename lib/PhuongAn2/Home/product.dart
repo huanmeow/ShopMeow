@@ -10,11 +10,14 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final provider = FavoriteProvider.of(context);
-
     return GestureDetector(
       onTap: () {
-        //Navigator.push(context, MaterialPageRoute(builder: (context)=>Onboaring()));
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => DetailScreen(product: product),
+        //   ),
+        // );
       },
       child: Stack(
         children: [
@@ -30,12 +33,14 @@ class ProductCard extends StatelessWidget {
                 const SizedBox(height: 5),
                 // Center(
                 //   child: Hero(
-                //     tag: product.image,
-                //     child: Image.asset(
-                //       product.image,
-                //       width: 150,
-                //       height: 150,
-                //       fit: BoxFit.cover,
+                //     tag: product.id, // Sử dụng product.id làm tag
+                //     child: Material( // Bọc Image trong Material
+                //       child: Image.asset(
+                //         product.image[index],
+                //         width: 150,
+                //         height: 150,
+                //         fit: BoxFit.cover,
+                //       ),
                 //     ),
                 //   ),
                 // ),
@@ -61,7 +66,6 @@ class ProductCard extends StatelessWidget {
                         fontSize: 17,
                       ),
                     ),
-
                   ],
                 )
               ],
@@ -74,7 +78,7 @@ class ProductCard extends StatelessWidget {
                   height: 40,
                   width: 40,
                   decoration: const BoxDecoration(
-                    color: kprimaryColor,
+                    //color: Colors.grey,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(20),
                       bottomLeft: Radius.circular(10),

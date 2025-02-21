@@ -11,20 +11,36 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Quên mật khẩu')),
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Thay đổi mật khẩu", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
+            SizedBox(height: 30,),
             TextField(
               controller: _emailController,
-              decoration: InputDecoration(labelText: 'Email'),
+              decoration: InputDecoration(
+                  labelText: 'Email',
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color:Colors.blue),
+                )
+              ),
               keyboardType: TextInputType.emailAddress,
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: resetPassword,
-              child: Text('Gửi yêu cầu'),
+              onPressed:resetPassword,
+              style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              minimumSize: Size(double.infinity, 50),
+            ),
+              child: Text('Thay đổi mật khẩu'),
             ),
           ],
         ),
@@ -34,7 +50,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
   void resetPassword() async {
     String email = _emailController.text;
-
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
       ScaffoldMessenger.of(context).showSnackBar(
@@ -42,7 +57,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       );
     } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Lỗi: $error')),
+        SnackBar(content: Text('Vui lòng nhập gmail')),
       );
     }
   }

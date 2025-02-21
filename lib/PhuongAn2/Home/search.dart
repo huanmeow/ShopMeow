@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
-
+import '../../models/account.dart';
+import '../../services/databaseSe.dart';
 import '../../utils/contants.dart';
-class MySearchBAR extends StatelessWidget {
+import '../../widgets/account_card.dart';
+class MySearchBAR extends StatefulWidget {
   const MySearchBAR({super.key});
 
   @override
+  State<MySearchBAR> createState() => _MySearchBARState();
+}
+
+class _MySearchBARState extends State<MySearchBAR> {
+  final _searchController = TextEditingController();
+  List<Account> _searchResults = [];
+
+  @override
   Widget build(BuildContext context) {
+
     return Container(
       height: 55,
       width: double.infinity,
@@ -16,33 +27,47 @@ class MySearchBAR extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
       child: Row(
         children: [
-
           const SizedBox(width: 10),
-          const Flexible(
+          Flexible(
             flex: 4,
-            child: TextField(
-              decoration: InputDecoration(
-                  hintText: "Search...Code", border: InputBorder.none),
+            child: Column(
+              children: [
+                Flexible(
+                  flex: 5,
+                  child: SingleChildScrollView(
+                    child: TextField(
+                      maxLines: null,
+                      controller: _searchController,
+                      decoration: const InputDecoration(
+                        hintText: 'Tìm kiếm ',
+                        suffixIcon: Icon(Icons.search),
+                      ),
+                      onChanged: (value) {
+                        _searchAccounts(value);
+                      },
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: _searchResults.length,
+                    itemBuilder: (context, index) {
+                      return AccountCard(account: _searchResults[index]);
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
-          IconButton(onPressed: (){
-
-          }, icon:const  Icon(Icons.search)),
-          // height: 25,
-          //   width: 1.5,
-          //   color: Colors.grey,
-          // ),
-          // IconButton(
-          //   onPressed: () {
-          //
-          //   },
-          //   icon: const Icon(
-          //     Icons.tune,
-          //     color: Colors.grey,
-          //   ),
-          // ),
         ],
       ),
     );
   }
-}
+  void _searchAccounts(String keyword) {
+    DatabaseService().searchAccounts(keyword).then((results) {
+      setState(() {
+        _searchResults = results;
+      });
+    });
+  }
+  }

@@ -17,12 +17,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
   @override
   Widget build(BuildContext context) {
     List<List<Product>> selectcategories = [
-      all,
-      shoes,
-      beauty,
-      womenFashion,
-      jewelry,
-      menFashion
+
     ];
     return Scaffold(
       backgroundColor: Colors.white,
@@ -35,16 +30,7 @@ class _HomeScreen1State extends State<HomeScreen1> {
               const SizedBox(height: 40),
               const MySearchBAR(),
               const SizedBox(height: 20),
-              ImageSlider(
-                currentSlide: currentSlider,
-                onChange: (value) {
-                  setState(
-                        () {
-                      currentSlider = value;
-                    },
-                  );
-                },
-              ),
+
               const SizedBox(height: 20),
               // for category selection
               categoryItems(),
