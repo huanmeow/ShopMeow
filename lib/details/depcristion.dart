@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
-import '../utils/contants.dart';
+
+import '../Tienich/contants.dart';
+
 
 class Description extends StatelessWidget {
   final String description;

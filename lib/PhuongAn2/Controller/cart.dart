@@ -9,23 +9,8 @@ class CartScreen extends StatefulWidget {
 
 class _CartScreenState extends State<CartScreen> {
   List<CartItem> cartItems = [
-    CartItem(
-      productName: 'Áo thun nam',
-      price: 200000,
-      quantity: 2,
-      imageUrl: 'images/onboarding/ari.jpg',
-      isAsset: true,
-    ),
-    CartItem(
-      productName: 'Quần jean',
-      price: 350000,
-      quantity: 1,
-      imageUrl: 'images/onboarding/cap.jpg',
-      isAsset: true,
-    ),
-  ];
 
-  // Danh sách các sản phẩm được chọn
+    ];
   List<int> selectedItems = [];
 
   @override

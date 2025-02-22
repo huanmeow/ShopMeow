@@ -17,7 +17,7 @@ class _NapcardState extends State<Napcard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nap Qua The'),
+        title: const Text(''),
       ),
       body: SafeArea(
         child: SingleChildScrollView( // Add SingleChildScrollView to allow scrolling
@@ -26,11 +26,11 @@ class _NapcardState extends State<Napcard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Loai the: ", style: TextStyle(fontSize: 18)),
+                const Text("Loại thẻ ", style: TextStyle(fontSize: 18)),
                 const SizedBox(height: 8.0),
                 DropdownButton<String>(
                   value: selectedValue,
-                  hint: const Text('-Chon loai the-'),
+                  hint: const Text('-Chọn loại thẻ-'),
                   items: items.map((String item) {
                     return DropdownMenuItem<String>(
                       value: item,
@@ -44,11 +44,11 @@ class _NapcardState extends State<Napcard> {
                   },
                 ),
                 const SizedBox(height: 16.0),
-                const Text("Menh gia: ", style: TextStyle(fontSize: 18)),
+                const Text("Mệnh giá: ", style: TextStyle(fontSize: 18)),
                 const SizedBox(height: 8.0),
                 DropdownButton<String>(
                   value: selectedValue1,
-                  hint: const Text('-Chon menh gia-'),
+                  hint: const Text('-Chọn mệnh giá-'),
                   items: itemss.map((String item) {
                     return DropdownMenuItem<String>(
                       value: item,
@@ -66,15 +66,15 @@ class _NapcardState extends State<Napcard> {
                 const SizedBox(height: 8.0),
                 TextFormField(
                   decoration: const InputDecoration(
-                    hintText: "Nhap seriel the",
+                    hintText: "Nhập seriel thẻ",
                   ),
                 ),
                 const SizedBox(height: 16.0),
-                const Text("Ma the: ", style: TextStyle(fontSize: 18)),
+                const Text("Mã thẻ: ", style: TextStyle(fontSize: 18)),
                 const SizedBox(height: 8.0),
                 TextFormField(
                   decoration: const InputDecoration(
-                    hintText: "Nhap ma the",
+                    hintText: "Nhập mã thẻ",
                   ),
                 ),
                 const SizedBox(height: 15,),
@@ -105,7 +105,7 @@ class _NapcardState extends State<Napcard> {
                         borderRadius: BorderRadius.circular(10.0), // Border radius
                       ),
                     ),
-                    child: const Text("Nap The",style: TextStyle(color: Colors.white),),
+                    child: const Text("Nạp thẻ",style: TextStyle(color: Colors.white),),
                   ),
                 )
               ],

@@ -17,7 +17,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: const Text(''),
         centerTitle: true, // Center the title
       ),
       body: SingleChildScrollView(
@@ -31,7 +31,7 @@ class _ProfileState extends State<Profile> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(90), // Half of the height/width for a perfect circle
                     child: Image.asset(
-                      'images/onboarding/doila.jpg',
+                      'images/category/cate1.png',
                       height: 180,
                       width: 180,
                       fit: BoxFit.cover, // Ensure image covers the circle
@@ -60,7 +60,7 @@ class _ProfileState extends State<Profile> {
                   RichText(
                     text: const TextSpan(
                       children: <TextSpan>[
-                        TextSpan(text: "So du : ", style: TextStyle(color: Colors.black, fontSize: 18)),
+                        TextSpan(text: "Số dư : ", style: TextStyle(color: Colors.black, fontSize: 18)),
                         TextSpan(text: "1.000.000 ", style: TextStyle(color: Colors.red, fontSize: 18)),
                         TextSpan(text: "VND", style: TextStyle(color: Colors.black, fontSize: 18)),
                       ],
@@ -72,29 +72,29 @@ class _ProfileState extends State<Profile> {
             const SizedBox(height: 24), // Increased spacing
 
             // Use ListTile for consistent list items
-            _buildProfileItem(Icons.credit_card_outlined, "Ngan Hang", () {
+            _buildProfileItem(Icons.credit_card_outlined, "Nạp qua ngân hàng", () {
               Navigator.push(context,
                   MaterialPageRoute(
                       builder: (context) => const Bank()));
             }),
-            _buildProfileItem(Icons.sd_card, "Nap The", () {
+            _buildProfileItem(Icons.sd_card, "Nạp qua thẻ nạp", () {
               Navigator.push(context,
                   MaterialPageRoute(
                       builder: (context) => const Napcard()));
             }),
-            _buildProfileItem(Icons.attach_money, "Lich Su Nap The", () {}),
-            _buildProfileItem(Icons.shopping_cart_rounded, "Lich Su Mua Hang", () {}),
-            _buildProfileItem(Icons.account_circle_rounded, "Lien He CSKH 24/7", () {
+            _buildProfileItem(Icons.attach_money, "Lịch sử nạp thẻ", () {}),
+            _buildProfileItem(Icons.shopping_cart_rounded, "Lịch sử mua hàng", () {}),
+            _buildProfileItem(Icons.account_circle_rounded, "Liên hệ CSKH 24/7", () {
               Navigator.push(context,
                   MaterialPageRoute(
                       builder: (context) => const Maihuan()));
             }),
-            _buildProfileItem(Icons.checklist, "Chinh Sach Va Dieu Khoan", () {
+            _buildProfileItem(Icons.checklist, "Chính sách và điều khoản", () {
               Navigator.push(context,
                   MaterialPageRoute(
                       builder: (context) => const Chinhsachbaomat()));
             }),
-            _buildProfileItem(Icons.language, "Ngon Ngu", () {}),
+            _buildProfileItem(Icons.language, " Cài đặt ngôn ngữ", () {}),
           ],
         ),
       ),

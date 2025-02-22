@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
-
+import '../../Tienich/contants.dart';
 import '../../details/details_screen.dart';
-import '../../utils/contants.dart';
 import '../Models/product_models.dart';
+import '../Provider/favorite_provider.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -11,6 +10,8 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = FavoriteProvider.of(context);
+
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -34,17 +35,12 @@ class ProductCard extends StatelessWidget {
                 const SizedBox(height: 5),
                 Center(
                   child: Hero(
-                    tag: product.title,
-                    child: Material(
-                      child: ClipRRect( // Bọc Image trong ClipRRect
-                        borderRadius: BorderRadius.circular(10.0), // Ví dụ: bo tròn 10.0
-                        child: Image.asset(
-                          product.image,
-                          width: 180,
-                          height: 160,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
+                    tag: product.image,
+                    child: Image.asset(
+                      product.image,
+                      width: 150,
+                      height: 150,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -70,32 +66,42 @@ class ProductCard extends StatelessWidget {
                         fontSize: 17,
                       ),
                     ),
+                    // Đã xóa phần hiển thị màu sắc
                   ],
                 )
               ],
             ),
           ),
           Positioned(
-              child: Align(
-                alignment: Alignment.topRight,
-                child: Container(
-                  height: 40,
-                  width: 40,
-                  decoration: const BoxDecoration(
-                    //color: Colors.grey,
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(10),
-                    ),
-                  ),
-                  child: GestureDetector(
-                    onTap: () {
-                      // provider.toggleFavorite(product);
-                    },
-                    child: const Icon( Icons.favorite_border),
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: const BoxDecoration(
+                  color:Colors.blue,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    bottomRight: Radius.circular(25),
+                    topRight: Radius.circular(25),
+                    bottomLeft: Radius.circular(25),
                   ),
                 ),
-              ))
+                child: GestureDetector(
+                  onTap: () {
+                    provider.toggleFavorite(product);
+                  },
+                  child: Icon(
+                    provider.isExist(product)
+                        ? Icons.favorite
+                        : Icons.favorite_border,
+                    color: Colors.white,
+                    size: 22,
+                  ),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

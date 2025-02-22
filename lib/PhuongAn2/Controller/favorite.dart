@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../utils/contants.dart';
+import '../../Tienich/contants.dart';
 import '../Provider/favorite_provider.dart';
 class Favorite extends StatefulWidget {
   const Favorite({super.key});

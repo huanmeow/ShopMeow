@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../PhuongAn2/Models/product_models.dart';
 import '../PhuongAn2/Provider/add_to_card.dart';
-import '../utils/contants.dart';
+import '../Tienich/contants.dart';
 
 class AddToCart extends StatefulWidget {
   final Product product;

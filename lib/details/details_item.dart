@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../PhuongAn2/Models/product_models.dart';
-import '../utils/contants.dart';
+import '../Tienich/contants.dart';
 class ItemsDetails extends StatelessWidget {
   final Product product;
   const ItemsDetails({super.key, required this.product});

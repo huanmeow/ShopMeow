@@ -7,14 +7,14 @@ class Bank extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nap Qua Ngan Hang'), // Thêm Text vào title
+        title: const Text('Nạp qua ngân hàng'), // Thêm Text vào title
       ),
       body: SingleChildScrollView(
         child: SafeArea(
           child:
           Column(
             children: [
-              Image.asset("images/cacdanhmuc/tech.jpg", height: 850, width: 850,),
+              Image.asset("images/tech.jpg", height: 850, width: 850,),
             ],
           ),
         ),

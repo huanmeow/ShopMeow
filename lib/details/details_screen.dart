@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../PhuongAn2/Models/product_models.dart';
-import '../utils/contants.dart';
+import '../Tienich/contants.dart';
 import 'depcristion.dart';
 import 'details_appbar.dart';
 import 'details_card.dart';

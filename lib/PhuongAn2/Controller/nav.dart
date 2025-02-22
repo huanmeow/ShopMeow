@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../utils/contants.dart';
-import '../Home/home_screen1.dart';
+import '../../Tienich/contants.dart';
+import '../../screens/home_screen.dart';
 import 'Cart.dart';
 import 'favorite.dart';
 import 'profile.dart';
@@ -13,7 +13,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 0;
   List<Widget> screens = const [
-    HomeScreen1(),
+    HomeScreen(),
     Favorite(),
     CartScreen(),
     Profile(),
