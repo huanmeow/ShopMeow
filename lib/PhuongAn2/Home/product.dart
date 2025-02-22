@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../details/details_screen.dart';
 import '../../utils/contants.dart';
 import '../Models/product_models.dart';
 
@@ -12,12 +13,12 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => DetailScreen(product: product),
-        //   ),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(product: product),
+          ),
+        );
       },
       child: Stack(
         children: [
@@ -31,19 +32,22 @@ class ProductCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 5),
-                // Center(
-                //   child: Hero(
-                //     tag: product.id, // Sử dụng product.id làm tag
-                //     child: Material( // Bọc Image trong Material
-                //       child: Image.asset(
-                //         product.image[index],
-                //         width: 150,
-                //         height: 150,
-                //         fit: BoxFit.cover,
-                //       ),
-                //     ),
-                //   ),
-                // ),
+                Center(
+                  child: Hero(
+                    tag: product.title,
+                    child: Material(
+                      child: ClipRRect( // Bọc Image trong ClipRRect
+                        borderRadius: BorderRadius.circular(10.0), // Ví dụ: bo tròn 10.0
+                        child: Image.asset(
+                          product.image,
+                          width: 180,
+                          height: 160,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.only(left: 10),

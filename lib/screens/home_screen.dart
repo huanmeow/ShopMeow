@@ -6,6 +6,8 @@ import '../PhuongAn2/Models/category.dart';
 import '../PhuongAn2/Models/product_models.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -51,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    TextButton( // Thay bằng TextButton để có hiệu ứng khi nhấn
+                    TextButton(
                       onPressed: () {
 
                       },
@@ -65,7 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),)
                   ],
                 ),
-              // for shopping items
               const SizedBox(height: 10),
               GridView.builder(
                 padding: EdgeInsets.zero,

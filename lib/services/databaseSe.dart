@@ -19,5 +19,5 @@ class DatabaseService {
     return snapshot.docs.map((doc) => Account.fromFirestore(doc)).toList();
 
 
-}
+  }
 }
