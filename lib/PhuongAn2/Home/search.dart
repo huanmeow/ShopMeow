@@ -3,6 +3,7 @@ import '../../Tienich/contants.dart';
 import '../../models/account.dart';
 import '../../services/databaseSe.dart';
 import '../../widgets/account_card.dart';
+
 class MySearchBAR extends StatefulWidget {
   const MySearchBAR({super.key});
 
@@ -16,7 +17,6 @@ class _MySearchBARState extends State<MySearchBAR> {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       height: 55,
       width: double.infinity,
@@ -30,39 +30,34 @@ class _MySearchBARState extends State<MySearchBAR> {
           const SizedBox(width: 10),
           Flexible(
             flex: 4,
-            child: Column(
-              children: [
-                Flexible(
-                  flex: 5,
-                  child: SingleChildScrollView(
-                    child: TextField(
-                      maxLines: null,
-                      controller: _searchController,
-                      decoration: const InputDecoration(
-                        hintText: 'Tìm kiếm ',
-                        suffixIcon: Icon(Icons.search),
-                      ),
-                      onChanged: (value) {
-                        _searchAccounts(value);
-                      },
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: _searchResults.length,
-                    itemBuilder: (context, index) {
-                      return AccountCard(account: _searchResults[index]);
-                    },
-                  ),
-                ),
-              ],
+            child: TextField(
+              controller: _searchController,
+              decoration: const InputDecoration(
+                hintText: 'Tìm kiếm',
+                suffixIcon: Icon(Icons.search),
+                border: InputBorder.none,
+              ),
+              onChanged: (value) {
+                _searchAccounts(value);
+              },
             ),
           ),
+          // Hiển thị kết quả tìm kiếm trong ListView.builder, không cần Expanded
+          if (_searchResults.isNotEmpty) // Chỉ hiển thị khi có kết quả
+            Expanded( // Sử dụng Expanded để ListView chiếm không gian còn lại
+              child: ListView.builder(
+                shrinkWrap: true, // Quan trọng: để ListView nằm trong Container
+                itemCount: _searchResults.length,
+                itemBuilder: (context, index) {
+                  return AccountCard(account: _searchResults[index]);
+                },
+              ),
+            ),
         ],
       ),
     );
   }
+
   void _searchAccounts(String keyword) {
     DatabaseService().searchAccounts(keyword).then((results) {
       setState(() {
@@ -70,4 +65,4 @@ class _MySearchBARState extends State<MySearchBAR> {
       });
     });
   }
-  }
+}

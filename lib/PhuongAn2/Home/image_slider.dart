@@ -19,7 +19,7 @@ class _ImageSliderState extends State<ImageSlider> {
     super.initState();
     _pageController = PageController(initialPage: 0);
     _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
-      if (mounted) { // Kiểm tra widget đã được mount chưa
+      if (mounted) {
         setState(() {
           currentSlide = (currentSlide + 1) % 5; // 5 là số lượng ảnh
           _pageController.animateToPage(

@@ -13,7 +13,7 @@ class CartProvider extends ChangeNotifier {
     } else {
       _cart.add(product);
     }
-    notifyListeners(); // Báo cho các widget lắng nghe biết về sự thay đổi
+    notifyListeners();
   }
 
   static CartProvider of(BuildContext context, {bool listen = true}) {

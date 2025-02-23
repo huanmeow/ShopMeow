@@ -1,48 +1,46 @@
-
 import 'package:flutter/material.dart';
-
-import '../Tienich/contants.dart';
-
-
 class Description extends StatelessWidget {
   final String description;
   const Description({super.key, required this.description});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              width: 120,
-              height: 40,
-              decoration: BoxDecoration(
-                color: kprimaryColor,
-                borderRadius: BorderRadius.circular(20),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 150,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                alignment: Alignment.center,
+                child: const Text(
+                  "Chi tiết tài khoản ",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 16),
+                ),
               ),
-              alignment: Alignment.center,
-              child: const Text(
-                "Mô tả tài khoản ",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 16),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 20),
-        Text(
-          description,
-          style: const TextStyle(
-            fontSize: 16,
-            color: Colors.grey,
+            ],
           ),
-        ),
-      ],
+          const SizedBox(height: 20),
+          Text(
+            description,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.black,
+            ),
+          ),
+      
+        ],
+      ),
     );
   }
 }

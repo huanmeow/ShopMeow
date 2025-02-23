@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import '../Profile/bank.dart';
-import '../Profile/chinhsach.dart';
-import '../Profile/contact.dart';
-import '../Profile/napcard.dart';
+import '../PhuongAn2/Profile/bank.dart';
+import '../PhuongAn2/Profile/chinhsach.dart';
+import '../PhuongAn2/Profile/contact.dart';
+import '../PhuongAn2/Profile/napcard.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -17,7 +17,7 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
+        title: Center(child: const Text('Tài khoản',style: TextStyle(fontWeight: FontWeight.bold),)),
         centerTitle: true, // Center the title
       ),
       body: SingleChildScrollView(

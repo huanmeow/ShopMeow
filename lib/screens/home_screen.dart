@@ -26,14 +26,15 @@ class _HomeScreenState extends State<HomeScreen> {
       randomfree,
     ];
     return Scaffold(
+      appBar: AppBar(title: Center(child: const Text('Trang chủ',
+        style: TextStyle(fontWeight: FontWeight.bold),)),),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 40),
               const MySearchBAR(),
               const SizedBox(height: 20),
               ImageSlider(),
@@ -42,29 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 20),
               if (selectedIndex == 0)
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Center(
                       child: Text(
-                        "Đề xuất cho bạn",
+                        "Tài khoản đang sale ",
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w800,
                         ),
                       ),
                     ),
-                    TextButton(
-                      onPressed: () {
-
-                      },
-                      child: const Text(
-                        "Xem thêm",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
-                          color: Colors.black54,
-                        ),
-                      ),)
                   ],
                 ),
               const SizedBox(height: 10),

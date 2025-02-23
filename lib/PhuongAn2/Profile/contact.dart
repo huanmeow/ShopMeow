@@ -17,8 +17,8 @@ class Maihuan extends StatelessWidget {
             Text("Thông tin liên hệ\n"
                 "FaceBook : Kiệu Mai Huấn \n"
                 "Zalo 0393433084\n"
-                "Link FB : https://www.facebook.com/profile.php?id=61550101470912", style: TextStyle(fontSize: 18)),
-
+                "Link FB : https://www.facebook.com/profile.php?id=61550101470912",
+                style: TextStyle(fontSize: 18)),
           ],
 
         ),

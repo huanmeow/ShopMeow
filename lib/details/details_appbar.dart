@@ -4,7 +4,6 @@ import '../PhuongAn2/Provider/favorite_provider.dart';
 class DetailAppBar extends StatelessWidget {
   final Product product;
   const DetailAppBar({super.key, required this.product});
-
   @override
   Widget build(BuildContext context) {
     final provider = FavoriteProvider.of(context);
@@ -20,10 +19,10 @@ class DetailAppBar extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: const Icon(Icons.arrow_back_ios),
+            icon: const Icon(Icons.arrow_back_outlined),
           ),
           const Spacer(),
-          const SizedBox(width: 10),
+          const SizedBox(width: 5),
           IconButton(
             style: IconButton.styleFrom(
               backgroundColor: Colors.white,

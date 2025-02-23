@@ -10,23 +10,23 @@ class Category {
 
 final List<Category> categoriesList = [
   Category(
-    title: "All",
+    title: "Hot",
     image: "images/category/cate1.png",
   ),
   Category(
-    title: "Acc NOR",
+    title: "Acc\nNOR",
     image: "images/category/cate2.png",
   ),
   Category(
-    title: "Acc VIP",
+    title: "Acc\nVIP",
     image: "images/category/cate3.png",
   ),
   Category(
-    title: "Acc Reg",
+    title: "Acc\nReg",
     image: "images/category/cate4.png",
   ),
   Category(
-    title: "Random",
+    title: "Acc\nRandom",
     image: "images/category/cate5.png",
   ),
 ];

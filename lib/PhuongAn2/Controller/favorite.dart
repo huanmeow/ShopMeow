@@ -12,18 +12,16 @@ class _FavoriteState extends State<Favorite> {
     final provider = FavoriteProvider.of(context);
     final finalList = provider.favorites;
     return Scaffold(
-      backgroundColor: kcontentColor,
       appBar: AppBar(
-        backgroundColor: kcontentColor,
         title: const Text(
-          "Favorite",
+          "Danh sách yêu thích",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
       body: Column(
-        children: [
-          Expanded(
+              children: [
+                    Expanded(
               child: ListView.builder(
                   itemCount: finalList.length,
                   itemBuilder: (context, index) {
@@ -103,7 +101,9 @@ class _FavoriteState extends State<Favorite> {
                         ),
                       ],
                     );
-                  }))
+                  },
+                  ),
+                    ),
         ],
       ),
     );

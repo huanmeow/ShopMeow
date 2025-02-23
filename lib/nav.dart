@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../Tienich/contants.dart';
-import '../../screens/home_screen.dart';
-import 'Cart.dart';
-import 'favorite.dart';
-import 'profile.dart';
+import 'screens/home_screen.dart';
+import 'PhuongAn2/Controller/Cart.dart';
+import 'PhuongAn2/Controller/favorite.dart';
+import 'Account/profile.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -40,7 +39,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(
                 Icons.home,
                 size: 30,
-                color: currentIndex == 0 ? kprimaryColor : Colors.grey.shade400,
+                color: currentIndex == 0 ? Colors.blue : Colors.grey.shade400,
               ),
             ),
             IconButton(
@@ -52,7 +51,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(
                 Icons.favorite_border,
                 size: 30,
-                color: currentIndex == 1 ? kprimaryColor : Colors.grey.shade400,
+                color: currentIndex == 1 ? Colors.blue : Colors.grey.shade400,
               ),
             ),
             IconButton(
@@ -64,7 +63,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(
                 Icons.shopping_cart_outlined,
                 size: 30,
-                color: currentIndex == 2 ? kprimaryColor : Colors.grey.shade400,
+                color: currentIndex == 2 ? Colors.blue : Colors.grey.shade400,
               ),
             ),
             IconButton(
@@ -76,7 +75,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               icon: Icon(
                 Icons.person,
                 size: 30,
-                color: currentIndex == 3 ? kprimaryColor : Colors.grey.shade400,
+                color: currentIndex == 3 ? Colors.blue : Colors.grey.shade400,
               ),
             ),
           ],

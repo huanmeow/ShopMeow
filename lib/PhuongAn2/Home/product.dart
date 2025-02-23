@@ -38,20 +38,22 @@ class ProductCard extends StatelessWidget {
                     tag: product.image,
                     child: Image.asset(
                       product.image,
-                      width: 150,
-                      height: 150,
+                      width: 170,
+                      height: 170,
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.only(left: 10),
-                  child: Text(
-                    product.title,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                  child: Center(
+                    child: Text(
+                      product.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -66,7 +68,6 @@ class ProductCard extends StatelessWidget {
                         fontSize: 17,
                       ),
                     ),
-                    // Đã xóa phần hiển thị màu sắc
                   ],
                 )
               ],

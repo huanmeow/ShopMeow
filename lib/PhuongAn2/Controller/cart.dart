@@ -17,7 +17,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Giỏ hàng'),
+        title: Center(child: const Text('Giỏ hàng',style: TextStyle(fontWeight: FontWeight.bold),)),
       ),
       body: cartItems.isEmpty
           ? const Center(child: Text('Giỏ hàng của bạn đang trống.'))
