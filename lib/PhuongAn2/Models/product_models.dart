@@ -10,11 +10,11 @@ class Product {
         required this.description,
         required this.image,
         required this.price,
-        required this.category,}
-      );
+        required this.category,
+      });
 }
 
-final List<Product> pick = [
+final List<Product> hot = [
   Product(
     title: "Mã số: 001",
     description:
@@ -43,410 +43,271 @@ final List<Product> pick = [
       "images/accone/acc1.5.jpeg",
       "images/accone/acc1.6.jpeg",
       "images/accone/acc1.7.jpeg",
-
-
     ],
      
-    price: 25000,
-    category: "Electronics",
+    price: 2500000,
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     price: 0,
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
-    category: "Electronics",
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     price: 500,
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
-    category: "Electronics",
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
     price: 500,
-    category: "Electronics",
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
     price: 500,
-    category: "Electronics",
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
     price: 500,
-    category: "Electronics",
+    category: "Liên Quân Mobile",
   ),
-
 ];
-final List<Product> sale = [
+final List<Product> pick = [
   Product(
     title: "Mã số: 11111",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
     price: 500,
-    category: "Electronics",
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     
     price: 500,
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
-
-    
-    category: "Electronics",
-   
-    
-
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
     price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "",
     image:[
       "images/slider/slider2.png",
       "images/slider/slider1.png",
     ],
     price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    category: "Liên Quân Mobile",
   ),
 ];
-final List<Product> random = [
-  Product(
-    title: "Mã số: 626110",
-    description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
-    ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
-  ),
-  Product(
-    title: "Mã số: 626110",
-    description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
-    ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
-  ),
-  Product(
-    title: "Mã số: 626110",
-    description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
-    ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
-  ),
-  Product(
-    title: "Mã số: 626110",
-    description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
-    ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
-  ),
-];
-
 final List<Product> reg = [
-
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+   "Reg Maloc Đại tướng robot\nTướng :8\nTrang phục :6\nTrắng thông tin",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Reg/reg1.jpeg",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 179000,
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "Reg Flo Tinh hệ\nTướng :12\nTrang phục :7\nTrắng thông tin",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Reg/reg2.jpeg",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 200000,
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "Reg TelAnnat Tân niên vệ thần\nTướng :8\nTrang phục :6\nTrắng thông tin",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Reg/reg3.jpeg",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 150000,
+    category: "Liên Quân Mobile",
   ),
   Product(
     title: "Mã số: 626110",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "Reg Arum Vũ khúc\nTướng :14\nTrang phục :6\nTrắng thông tin",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Reg/reg4.jpeg",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 100000,
+    category: "Liên Quân Mobile",
   ),
 ];
-final List<Product> randomvip = [
+final List<Product> random1 = [
 
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 00001",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "100% Từ 50 - 115 Tướng\n"
+        "- Ngoài Ra Có Thêm:\n"
+  "75% Có Skin Hợp Tác\nTrạng thái : TTT" ,
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random1.png",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 150000,
+    category: "Liên Quân Mobile",
   ),
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 00002",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+"100% Từ 50 - 115 Tướng\n"
+"- Ngoài Ra Có Thêm:\n"
+"75% Có Skin Hợp Tác\nTrạng thái : TTT" ,
+image:[
+"images/Random/random1.png",
+],
+price: 150000,
+category: "Liên Quân Mobile",
+),
+
+  Product(
+    title: "Mã số: 00003",
+    description:
+    "100% Từ 50 - 115 Tướng\n"
+        "- Ngoài Ra Có Thêm:\n"
+        "75% Có Skin Hợp Tác\nTrạng thái : TTT" ,
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random1.png",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 150000,
+    category: "Liên Quân Mobile",
   ),
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 00004",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "100% Từ 50 - 115 Tướng\n"
+        "- Ngoài Ra Có Thêm:\n"
+        "75% Có Skin Hợp Tác\nTrạng thái : TTT" ,
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random1.png",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
-  ),
-  Product(
-    title: "Mã số: 626110",
-    description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
-    ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 150000,
+    category: "Liên Quân Mobile",
   ),
 ];
-final List<Product> randomfree = [
-
+final List<Product> random2 = [
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 000201",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "100% Từ 50 - 115 Tướng ("
+        " có tỉ lệ nổ acc có skin ss, sss lên đến 80% )\n"
+    "- Ngoài Ra Có Thêm:\n"
+    "75% Có Skin Hợp Tác\n"
+    "65% Acc Khủng (Trên 300 Skin)\n"
+    "50% Có Skin SSS\n\nTrạng thái : TTT"
+    "CHÚC CÁC BẠN MAY MẮN NHA!!!",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random2.png",
     ],
-    price: 500,
-    
-
-    
-    category: "Electronics",
-   
-    
-
+    price: 300000,
+    category: "Liên Quân Mobile",
   ),
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 000202",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "100% Từ 50 - 115 Tướng ("
+        " có tỉ lệ nổ acc có skin ss, sss lên đến 80% )\n"
+        "- Ngoài Ra Có Thêm:\n"
+        "75% Có Skin Hợp Tác\n"
+        "65% Acc Khủng (Trên 300 Skin)\n"
+        "50% Có Skin SSS\n\nTrạng thái : TTT"
+        "CHÚC CÁC BẠN MAY MẮN NHA!!!",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random2.png",
     ],
-    price: 500,
-    
-    category: "Electronics",
-   
-    
-
+    price: 300000,
+    category: "Liên Quân Mobile",
   ),
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 000203",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "100% Từ 50 - 115 Tướng ("
+        " có tỉ lệ nổ acc có skin ss, sss lên đến 80% )\n"
+        "- Ngoài Ra Có Thêm:\n"
+        "75% Có Skin Hợp Tác\n"
+        "65% Acc Khủng (Trên 300 Skin)\n"
+        "50% Có Skin SSS\n\nTrạng thái : TTT"
+        "CHÚC CÁC BẠN MAY MẮN NHA!!!",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random2.png",
     ],
-    price: 500,
-    
-    category: "Electronics",
-   
-    
-
+    price: 300000,
+    category: "Liên Quân Mobile",
   ),
   Product(
-    title: "Mã số: 626110",
+    title: "Mã số: 000204",
     description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    "100% Từ 50 - 115 Tướng ("
+        " có tỉ lệ nổ acc có skin ss, sss lên đến 80% )\n"
+        "- Ngoài Ra Có Thêm:\n"
+        "75% Có Skin Hợp Tác\n"
+        "65% Acc Khủng (Trên 300 Skin)\n"
+        "50% Có Skin SSS\n\nTrạng thái : TTT"
+        "CHÚC CÁC BẠN MAY MẮN NHA!!!",
     image:[
-      "images/slider/slider2.png",
-      "images/slider/slider1.png",
+      "images/Random/random2.png",
     ],
-    price: 500,
-    
-    category: "Electronics",
-   
-    
-
+    price: 300000,
+    category: "Liên Quân Mobile",
   ),
-
 ];

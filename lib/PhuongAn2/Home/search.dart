@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import '../../Tienich/contants.dart';
 import '../../models/account.dart';
 import '../../services/databaseSe.dart';
-import '../../widgets/account_card.dart';
-
 class MySearchBAR extends StatefulWidget {
   const MySearchBAR({super.key});
 
@@ -43,16 +41,16 @@ class _MySearchBARState extends State<MySearchBAR> {
             ),
           ),
           // Hiển thị kết quả tìm kiếm trong ListView.builder, không cần Expanded
-          if (_searchResults.isNotEmpty) // Chỉ hiển thị khi có kết quả
-            Expanded( // Sử dụng Expanded để ListView chiếm không gian còn lại
-              child: ListView.builder(
-                shrinkWrap: true, // Quan trọng: để ListView nằm trong Container
-                itemCount: _searchResults.length,
-                itemBuilder: (context, index) {
-                  return AccountCard(account: _searchResults[index]);
-                },
-              ),
-            ),
+          // if (_searchResults.isNotEmpty) // Chỉ hiển thị khi có kết quả
+          //   Expanded( // Sử dụng Expanded để ListView chiếm không gian còn lại
+          //     child: ListView.builder(
+          //       shrinkWrap: true, // Quan trọng: để ListView nằm trong Container
+          //       itemCount: _searchResults.length,
+          //       itemBuilder: (context, index) {
+          //         return AccountCard(account: _searchResults[index]);
+          //       },
+          //     ),
+          //   ),
         ],
       ),
     );

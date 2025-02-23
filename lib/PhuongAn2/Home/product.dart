@@ -3,6 +3,8 @@ import '../../Tienich/contants.dart';
 import '../../details/details_screen.dart';
 import '../Models/product_models.dart';
 import '../Provider/favorite_provider.dart';
+import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -10,8 +12,7 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = FavoriteProvider.of(context);
-    int conganh=0;
+    final provider = Provider.of<FavoriteProvider>(context);
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -62,10 +63,11 @@ class ProductCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(
-                      "\$${product.price}",
+                      NumberFormat.decimalPattern('vi_VN').format(product.price),
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
+                        color: Colors.red,
                       ),
                     ),
                   ],

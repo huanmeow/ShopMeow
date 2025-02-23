@@ -12,6 +12,7 @@ void main() async {
   await Firebase.initializeApp();
   runApp(
     MultiProvider(providers:[
+      ChangeNotifierProvider(create: (_)=>FavoriteProvider()),
       ChangeNotifierProvider(create: (_)=>CartProvider()),
       ChangeNotifierProvider(create: (_) => FavoriteProvider()),
     ] ,
@@ -33,7 +34,6 @@ class MyApp extends StatelessWidget {
   Widget _getHomeScreen() {
     if (AuthService().currentUser != null) {
       return BottomNavBar();
-      //  HomeScreen();
     } else {
       return LoginScreen();
     }

@@ -20,7 +20,7 @@ class ItemsDetails extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 220),
+              padding: const EdgeInsets.only(left: 170),
               child: Image.asset("images/logo.jpg",height: 70,width: 70,),
             ),
           ],

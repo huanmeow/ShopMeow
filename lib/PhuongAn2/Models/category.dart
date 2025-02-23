@@ -14,19 +14,19 @@ final List<Category> categoriesList = [
     image: "images/category/cate1.png",
   ),
   Category(
-    title: "Acc\nNOR",
+    title: "Tự Chọn",
     image: "images/category/cate2.png",
   ),
   Category(
-    title: "Acc\nVIP",
+    title: "Acc Reg",
     image: "images/category/cate3.png",
   ),
   Category(
-    title: "Acc\nReg",
+    title: "Random \nSơ Cấp",
     image: "images/category/cate4.png",
   ),
   Category(
-    title: "Acc\nRandom",
+    title: "Random \nSiêu Cấp",
     image: "images/category/cate5.png",
   ),
 ];
