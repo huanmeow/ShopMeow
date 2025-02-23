@@ -33,9 +33,25 @@ class DetailAppBar extends StatelessWidget {
             },
             icon: Icon(
               provider.isExist(product)
+                  ? Icons.shopping_cart_outlined
+                  : Icons.shopping_cart_rounded,
+              color: Colors.red,
+              size: 25,
+            ),
+          ),
+          IconButton(
+            style: IconButton.styleFrom(
+              backgroundColor: Colors.white,
+              padding: const EdgeInsets.all(15),
+            ),
+            onPressed: () {
+              provider.toggleFavorite(product);
+            },
+            icon: Icon(
+              provider.isExist(product)
                   ? Icons.favorite
                   : Icons.favorite_border,
-              color: Colors.black,
+              color: Colors.red,
               size: 25,
             ),
           ),

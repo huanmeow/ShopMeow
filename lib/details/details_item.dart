@@ -20,8 +20,8 @@ class ItemsDetails extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 140),
-              child: Image.asset("images/logo.jpg",height: 80,width: 80,),
+              padding: const EdgeInsets.only(left: 220),
+              child: Image.asset("images/logo.jpg",height: 70,width: 70,),
             ),
           ],
         ),
@@ -39,7 +39,7 @@ class ItemsDetails extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
-                // for rating
+
               ],
             ),
           ],

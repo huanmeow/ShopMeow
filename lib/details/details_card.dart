@@ -28,7 +28,7 @@ class _AddToCartState extends State<AddToCart> {
         padding: const EdgeInsets.symmetric(horizontal: 15),
         alignment: Alignment.center,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.end, // Thay đổi thành MainAxisAlignment.end
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             GestureDetector(
               onTap: () {
@@ -68,16 +68,18 @@ class _AddToCartState extends State<AddToCart> {
                   ],
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: const Text(
-                  "Mua ngay",
-                  style: TextStyle(
+                child: TextButton(onPressed: (){
+
+                },
+                  child:Text("Mua ngay",style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   ),
+                  ),
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ),

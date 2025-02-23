@@ -11,7 +11,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = FavoriteProvider.of(context);
-
+    int conganh=0;
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -37,7 +37,7 @@ class ProductCard extends StatelessWidget {
                   child: Hero(
                     tag: product.image,
                     child: Image.asset(
-                      product.image,
+                      product.image[0],
                       width: 170,
                       height: 170,
                       fit: BoxFit.cover,

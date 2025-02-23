@@ -1,7 +1,7 @@
 class Product {
   final String title;
   final String description;
-  final String image;
+  final List< String> image;
   final double price;
   final String category;
   Product(
@@ -34,8 +34,19 @@ final List<Product> pick = [
         "\ncap kimono, "
         "ric susano, "
         "bijan cơ giáp.",
-    image:
-      "images/slider/slider1.png",
+    image:[
+      "images/accone/acc1.jpeg",
+      "images/accone/acc1.1.jpeg",
+      "images/accone/acc1.2.jpeg",
+      "images/accone/acc1.3.jpeg",
+      "images/accone/acc1.4.jpeg",
+      "images/accone/acc1.5.jpeg",
+      "images/accone/acc1.6.jpeg",
+      "images/accone/acc1.7.jpeg",
+
+
+    ],
+     
     price: 25000,
     category: "Electronics",
   ),
@@ -43,9 +54,11 @@ final List<Product> pick = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    price: 500,
-    image:
-    "images/slider/slider1.png",
+    price: 0,
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     category: "Electronics",
   ),
   Product(
@@ -53,15 +66,20 @@ final List<Product> pick = [
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
     price: 500,
-    image: "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     category: "Electronics",
   ),
   Product(
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     category: "Electronics",
   ),
@@ -69,8 +87,10 @@ final List<Product> pick = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     category: "Electronics",
   ),
@@ -78,8 +98,10 @@ final List<Product> pick = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     category: "Electronics",
   ),
@@ -90,8 +112,10 @@ final List<Product> sale = [
     title: "Mã số: 11111",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     category: "Electronics",
   ),
@@ -101,23 +125,10 @@ final List<Product> sale = [
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
     
     price: 500,
-    image:
-    "images/slider/slider1.png",
-
-    
-    category: "Electronics",
-   
-    
-
-  ),
-  Product(
-    title: "Mã số: 626110",
-    description:
-    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
-    price: 500,
-    
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
 
     
     category: "Electronics",
@@ -129,8 +140,27 @@ final List<Product> sale = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
+    price: 500,
+    
+
+    
+    category: "Electronics",
+   
+    
+
+  ),
+  Product(
+    title: "Mã số: 626110",
+    description:
+    "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -146,8 +176,10 @@ final List<Product> random = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -161,8 +193,10 @@ final List<Product> random = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -176,8 +210,10 @@ final List<Product> random = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -191,8 +227,10 @@ final List<Product> random = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -210,8 +248,10 @@ final List<Product> reg = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -225,8 +265,10 @@ final List<Product> reg = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -240,8 +282,10 @@ final List<Product> reg = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -255,8 +299,10 @@ final List<Product> reg = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -273,8 +319,10 @@ final List<Product> randomvip = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -288,8 +336,10 @@ final List<Product> randomvip = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -303,8 +353,10 @@ final List<Product> randomvip = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -318,8 +370,10 @@ final List<Product> randomvip = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -336,8 +390,10 @@ final List<Product> randomfree = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
 
@@ -351,8 +407,10 @@ final List<Product> randomfree = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
     category: "Electronics",
@@ -364,8 +422,10 @@ final List<Product> randomfree = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
     category: "Electronics",
@@ -377,8 +437,10 @@ final List<Product> randomfree = [
     title: "Mã số: 626110",
     description:
     "Raz gon, ryoma samusai, nata hỏa nghiệp nak vệ thần, flo tinh hệ, tulen tân niên, vio thần long, omen đao phủ, lili ss, ngộ sv, ngô tân niên, ngộ 5, ngộ xích diễm, raz thái, lavi xạ thần, cap kimono, ric susano, bijan cơ giáp.",
-    image:
-    "images/slider/slider1.png",
+    image:[
+      "images/slider/slider2.png",
+      "images/slider/slider1.png",
+    ],
     price: 500,
     
     category: "Electronics",
