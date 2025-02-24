@@ -1,4 +1,4 @@
-
+import 'package:shopmeo/Account/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../PhuongAn2/Profile/bank.dart';
 import '../PhuongAn2/Profile/chinhsach.dart';
@@ -11,25 +11,32 @@ class Profile extends StatefulWidget {
   @override
   State<Profile> createState() => _ProfileState();
 }
-
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: const Text('Tài khoản',style: TextStyle(fontWeight: FontWeight.bold),)),
+        title: Center(
+            child: const Text(
+          'Tài khoản',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )),
         centerTitle: true, // Center the title
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0), // Consistent padding
+        padding: const EdgeInsets.all(16.0),
+        // Consistent padding
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Align content to the start
+          crossAxisAlignment: CrossAxisAlignment.start,
+          // Align content to the start
           children: [
-            Center( // Center the profile image
+            Center(
+              // Center the profile image
               child: Stack(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(90), // Half of the height/width for a perfect circle
+                    borderRadius: BorderRadius.circular(90),
+                    // Half of the height/width for a perfect circle
                     child: Image.asset(
                       'images/category/cate1.png',
                       height: 180,
@@ -44,7 +51,8 @@ class _ProfileState extends State<Profile> {
                       onPressed: () {},
                       icon: const Icon(Icons.camera_alt),
                       style: IconButton.styleFrom(
-                        backgroundColor: Colors.white, // Background color for the icon
+                        backgroundColor: Colors.white,
+                        // Background color for the icon
                         foregroundColor: Colors.black, // Icon color
                       ),
                     ),
@@ -53,16 +61,36 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             const SizedBox(height: 16),
-            Center( // Center the ID and balance information
+            Center(
+              // Center the ID and balance information
               child: Column(
                 children: [
-                  const Text("ID: huanmai", style: TextStyle(color: Colors.green, fontSize: 18)),
+                  const Text("ID: huanmai",
+                      style: TextStyle(
+                          color: Colors.green,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold)),
                   RichText(
                     text: const TextSpan(
                       children: <TextSpan>[
-                        TextSpan(text: "Số dư : ", style: TextStyle(color: Colors.black, fontSize: 18)),
-                        TextSpan(text: "1.000.000 ", style: TextStyle(color: Colors.red, fontSize: 18)),
-                        TextSpan(text: "VND", style: TextStyle(color: Colors.black, fontSize: 18)),
+                        TextSpan(
+                            text: "Số dư : ",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: "1.000.000 ",
+                            style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
+                        TextSpan(
+                            text: "VND",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
@@ -72,45 +100,75 @@ class _ProfileState extends State<Profile> {
             const SizedBox(height: 24), // Increased spacing
 
             // Use ListTile for consistent list items
-            _buildProfileItem(Icons.credit_card_outlined, "Nạp qua ngân hàng", () {
+            _buildProfileItem(Icons.credit_card_outlined, "Nạp qua ngân hàng",
+                () {
               Navigator.push(context,
-                  MaterialPageRoute(
-                      builder: (context) => const Bank()));
+                  MaterialPageRoute(builder: (context) => const Bank()));
             }),
             _buildProfileItem(Icons.sd_card, "Nạp qua thẻ nạp", () {
               Navigator.push(context,
-                  MaterialPageRoute(
-                      builder: (context) => const Napcard()));
+                  MaterialPageRoute(builder: (context) => const Napcard()));
             }),
             _buildProfileItem(Icons.attach_money, "Lịch sử nạp thẻ", () {}),
-            _buildProfileItem(Icons.shopping_cart_rounded, "Lịch sử mua hàng", () {}),
-            _buildProfileItem(Icons.account_circle_rounded, "Liên hệ CSKH 24/7", () {
+            _buildProfileItem(
+                Icons.shopping_cart_rounded, "Lịch sử mua hàng", () {}),
+            _buildProfileItem(Icons.account_circle_rounded, "Liên hệ CSKH 24/7",
+                () {
               Navigator.push(context,
-                  MaterialPageRoute(
-                      builder: (context) => const Maihuan()));
+                  MaterialPageRoute(builder: (context) => const Maihuan()));
             }),
             _buildProfileItem(Icons.checklist, "Chính sách và điều khoản", () {
-              Navigator.push(context,
+              Navigator.push(
+                  context,
                   MaterialPageRoute(
                       builder: (context) => const Chinhsachbaomat()));
             }),
             _buildProfileItem(Icons.language, " Cài đặt ngôn ngữ", () {}),
+            _buildProfileItem(Icons.logout, "Đăng xuất", () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: const Text("Xác nhận đăng xuất"),
+                    content: const Text("Bạn có chắc chắn muốn đăng xuất?"),
+                    actions: <Widget>[
+                      TextButton(
+                        child: const Text("Hủy"),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      TextButton(
+                        child: const Text("Đăng xuất"),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          // Gọi LogoutButton ở đây
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginScreen()));
+                        },
+                      ),
+                    ],
+                  );
+                },
+              );
+            }),
           ],
         ),
       ),
     );
   }
 
-  // Helper function to build ListTile items
   Widget _buildProfileItem(IconData icon, String text, VoidCallback onPressed) {
-    return Card( // Add cards for better visual separation
-      elevation: 2, // Add a subtle shadow
-      margin: const EdgeInsets.symmetric(vertical: 8), // Spacing between cards
+    return Card(
+      elevation: 2,
+      margin: const EdgeInsets.symmetric(vertical: 8),
       child: ListTile(
         leading: Icon(icon),
         title: Text(text, style: const TextStyle(fontSize: 18)),
         onTap: onPressed,
-        trailing: const Icon(Icons.arrow_forward_ios), // Add a trailing arrow
+        trailing: const Icon(Icons.arrow_forward_ios),
       ),
     );
   }

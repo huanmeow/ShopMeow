@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:shopmeo/Account/login_screen.dart';
+import 'package:shopmeo/screens/cart_item.dart';
 import 'package:shopmeo/services/auth_service.dart';
-import 'PhuongAn2/Provider/add_to_card.dart';
 import 'nav.dart';
 import 'PhuongAn2/Provider/favorite_provider.dart';
 
@@ -12,7 +12,6 @@ void main() async {
   await Firebase.initializeApp();
   runApp(
     MultiProvider(providers:[
-      ChangeNotifierProvider(create: (_)=>FavoriteProvider()),
       ChangeNotifierProvider(create: (_)=>CartProvider()),
       ChangeNotifierProvider(create: (_) => FavoriteProvider()),
     ] ,
@@ -28,7 +27,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: _getHomeScreen(),
+      home: //
+
+      _getHomeScreen(),
     );
   }
   Widget _getHomeScreen() {
