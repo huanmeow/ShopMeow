@@ -1,18 +1,16 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shopmeo/Account/login_admin.dart';
 import 'package:shopmeo/Account/register_screen.dart';
 import '../PhuongAn2/Profile/chinhsach.dart';
+import '../nav.dart';
 import '../services/database_service.dart';
-import '../screens/home_screen.dart';
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
-
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
-
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
@@ -110,15 +108,40 @@ class _LoginScreenState extends State<LoginScreen> {
                               },
                             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)
                         ),
-                      ]
+                      ],
+
                   ),
+                ),
+                SizedBox(height: 18,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 300.0),
+                  child: FloatingActionButton(
+                    onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginAdmin()));
+                    },
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(35.0),),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(35.0),
+                      child: Image.asset('images/logo.jpg',
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.cover,
+                      ),
+
+                    ),
+
+                    ),
                 ),
               ],
             ),
           ),
+
         ),
       ),
+
     );
+
   }
 
   void _login() async {
@@ -134,10 +157,10 @@ class _LoginScreenState extends State<LoginScreen> {
         _isLoading = false;
       });
       if (user != null) {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavBar()));
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Đăng nhập thất bại')),
+          const SnackBar(content: Text('Tài khoản hoặc mật khẩu không chính xác')),
         );
       }
     }

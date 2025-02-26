@@ -70,11 +70,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       borderSide: BorderSide(color: Colors.blue),
                     ),
                   ),
+                  obscureText: true,
                 ),
                 SizedBox(height: 5,),
                 Text("Bạn cần sử dụng email trong trường hợp đặt lại mật khẩu "
                   ,style: TextStyle(fontSize: 12, color:Colors.blue),),
-                const SizedBox(height: 20),
+                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: _register,
                   child: _isLoading
@@ -117,11 +118,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
       });
       if (user != null) {
         // Đăng ký thành công, chuyển sang màn hình chính
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
       } else {
         // Đăng ký thất bại, hiển thị thông báo lỗi
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Đăng ký thất bại')),
+          const SnackBar(content: Text('Đăng ký thành công')),
         );
       }
     }

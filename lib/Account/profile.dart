@@ -25,23 +25,19 @@ class _ProfileState extends State<Profile> {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
-        // Consistent padding
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          // Align content to the start
           children: [
             Center(
-              // Center the profile image
               child: Stack(
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(90),
-                    // Half of the height/width for a perfect circle
                     child: Image.asset(
                       'images/category/cate1.png',
                       height: 180,
                       width: 180,
-                      fit: BoxFit.cover, // Ensure image covers the circle
+                      fit: BoxFit.cover,
                     ),
                   ),
                   Positioned(
@@ -159,7 +155,6 @@ class _ProfileState extends State<Profile> {
       ),
     );
   }
-
   Widget _buildProfileItem(IconData icon, String text, VoidCallback onPressed) {
     return Card(
       elevation: 2,

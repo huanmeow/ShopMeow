@@ -44,6 +44,12 @@ flutter:
       - images/Random/
       - images/Reg/
       - images/TuChon/
+      - images/TuChon/2/
+      - images/TuChon/3/
+      - images/TuChon/4/
+      - images/TuChon/5/
+      - images/TuChon/6/
+      - images/Pick/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
