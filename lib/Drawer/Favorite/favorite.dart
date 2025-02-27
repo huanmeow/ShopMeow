@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../Tienich/contants.dart';
 import '../../details/details_screen.dart';
-import '../Provider/favorite_provider.dart';
-import '../Models/product_models.dart';
+import 'favorite_provider.dart';
+import '../../PhuongAn2/Models/product_models.dart';
 import 'package:provider/provider.dart';
 
 class Favorite extends StatefulWidget {
@@ -34,8 +34,8 @@ class _FavoriteState extends State<Favorite> {
                 return GestureDetector(
                   onTap:(){
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
+                      context,
+                      MaterialPageRoute(
                         builder: (context) => DetailScreen(product: favoriteItems),),);
                   },
                   child: Stack(

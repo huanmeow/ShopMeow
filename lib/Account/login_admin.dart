@@ -2,9 +2,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shopmeo/Account/register_screen.dart';
-import '../PhuongAn2/Profile/chinhsach.dart';
+import '../Drawer/chinhsach.dart';
 import '../services/database_service.dart';
-import '../screens/home_screen.dart';
+import '../Drawer/home_screen.dart';
 
 class LoginAdmin extends StatefulWidget {
   const LoginAdmin({super.key});

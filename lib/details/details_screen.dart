@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../PhuongAn2/Models/product_models.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'dart:async';
-import 'depcristion.dart';
-import 'details_appbar.dart';
+import '../../details/depcristion.dart';
+import '../../details/details_appbar.dart';
+import '../../details/details_item.dart';
+import '../PhuongAn2/Models/product_models.dart';
 import 'details_card.dart';
-import 'details_item.dart';
-
 class DetailScreen extends StatefulWidget {
   final Product product;
   const DetailScreen({super.key, required this.product});
@@ -13,29 +13,29 @@ class DetailScreen extends StatefulWidget {
   @override
   State<DetailScreen> createState() => _DetailScreenState();
 }
-
 class _DetailScreenState extends State<DetailScreen> {
   int currentImage = 0;
   late PageController _pageController;
   Timer? _timer;
+
   @override
   void initState() {
     super.initState();
     currentImage = 0;
-    _pageController = PageController(initialPage: 0); // Khởi tạo PageController
+    _pageController = PageController(initialPage: 0);
     _startAutoSlider();
   }
   @override
   void dispose() {
-    _pageController.dispose(); // Hủy PageController
+    _pageController.dispose();
     _timer?.cancel();
     super.dispose();
   }
   void _startAutoSlider() {
-    _timer?.cancel(); // Hủy timer cũ (nếu có)
+    _timer?.cancel();
     if (widget.product.image != null && widget.product.image.isNotEmpty) {
       _timer = Timer.periodic(const Duration(seconds: 3), (timer) {
-        if (mounted) { // Kiểm tra widget đã mount hay chưa
+        if (mounted) {
           setState(() {
             currentImage = (currentImage + 1) % widget.product.image.length;
             _pageController.animateToPage(
@@ -48,7 +48,6 @@ class _DetailScreenState extends State<DetailScreen> {
       });
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,10 +62,10 @@ class _DetailScreenState extends State<DetailScreen> {
                 product: widget.product,
               ),
               SizedBox(
-                height: 250, // Hoặc chiều cao mong muốn
+                height: 250,
                 child: PageView.builder(
-                  controller: _pageController, // Gán PageController cho PageView
-                  itemCount: widget.product.image.length, // Số lượng ảnh
+                  controller: _pageController,
+                  itemCount: widget.product.image.length,
                   onPageChanged: (index) {
                     setState(() {
                       currentImage = index;
@@ -75,33 +74,29 @@ class _DetailScreenState extends State<DetailScreen> {
                   itemBuilder: (context, index) {
                     return Hero(
                       tag: widget.product.image[index],
-                      child: Image.asset(
-                        widget.product.image[index],
-                        fit: BoxFit.cover,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset(
+                          widget.product.image[index],
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     );
                   },
                 ),
               ),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  widget.product.image.length,
-                      (index) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 300),
-                    width: currentImage == index ? 15 : 8,
-                    height: 8,
-                    margin: const EdgeInsets.only(right: 3),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: currentImage == index
-                          ? Colors.black
-                          : Colors.transparent,
-                      border: Border.all(
-                        color: Colors.black,
-                      ),
-                    ),
+              const SizedBox(height: 10),
+              Center(
+                child: SmoothPageIndicator(
+                  controller: _pageController,
+                  count: widget.product.image.length,
+                  effect: const WormEffect(
+                    dotColor: Colors.grey,
+                    activeDotColor: Colors.black,
+                    dotWidth: 8.0,
+                    dotHeight: 8.0,
+                    spacing: 4.0,
                   ),
                 ),
               ),

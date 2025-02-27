@@ -53,7 +53,7 @@ class _DescriptionState extends State<Description> {
           const SizedBox(height: 20),
           AnimatedContainer(
             duration: const Duration(milliseconds: 300),
-            height: isExpanded ? null : 80,
+            height: isExpanded ? null : 50,
             child: Text(
               widget.description,
               style: const TextStyle(

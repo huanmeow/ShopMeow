@@ -1,8 +1,6 @@
 import 'package:shopmeo/Account/login_screen.dart';
 import 'package:flutter/material.dart';
-import '../PhuongAn2/Profile/bank.dart';
-import '../PhuongAn2/Profile/chinhsach.dart';
-import '../PhuongAn2/Profile/contact.dart';
+import 'bank.dart';
 import '../PhuongAn2/Profile/napcard.dart';
 
 class Profile extends StatefulWidget {
@@ -18,9 +16,9 @@ class _ProfileState extends State<Profile> {
       appBar: AppBar(
         title: Center(
             child: const Text(
-          'Tài khoản',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        )),
+              'Tài khoản',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )),
         centerTitle: true, // Center the title
       ),
       body: SingleChildScrollView(
@@ -105,21 +103,6 @@ class _ProfileState extends State<Profile> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Napcard()));
             }),
-            _buildProfileItem(Icons.attach_money, "Lịch sử nạp thẻ", () {}),
-            _buildProfileItem(
-                Icons.shopping_cart_rounded, "Lịch sử mua hàng", () {}),
-            _buildProfileItem(Icons.account_circle_rounded, "Liên hệ CSKH 24/7",
-                () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Maihuan()));
-            }),
-            _buildProfileItem(Icons.checklist, "Chính sách và điều khoản", () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const Chinhsachbaomat()));
-            }),
-            _buildProfileItem(Icons.language, " Cài đặt ngôn ngữ", () {}),
             _buildProfileItem(Icons.logout, "Đăng xuất", () {
               showDialog(
                 context: context,

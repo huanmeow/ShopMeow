@@ -25,7 +25,9 @@ class _HomeScreenState extends State<HomeScreen> {
       random2,
     ];
     return Scaffold(
-      appBar: AppBar(title: Center(child: const Text('Trang chủ',
+      appBar: AppBar(
+        title: Center(
+            child: const Text('Trang chủ',
         style: TextStyle(fontWeight: FontWeight.bold),)),),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(

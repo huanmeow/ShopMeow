@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shopmeo/Account/login_admin.dart';
 import 'package:shopmeo/Account/register_screen.dart';
-import '../PhuongAn2/Profile/chinhsach.dart';
+import '../Drawer/chinhsach.dart';
 import '../nav.dart';
 import '../services/database_service.dart';
 class LoginScreen extends StatefulWidget {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../PhuongAn2/Models/product_models.dart';
 class ItemsDetails extends StatelessWidget {
@@ -31,7 +32,10 @@ class ItemsDetails extends StatelessWidget {
               children: [
                 Center(
                   child: Text(
-                    "ATM/Card : ${product.price} VND",
+                    "ATM/Card : ${NumberFormat.currency(
+                        locale: 'vi_VN',
+                        symbol: 'VND',
+                        decimalDigits: 0).format(product.price)}",
                     style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 22,

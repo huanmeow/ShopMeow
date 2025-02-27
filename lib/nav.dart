@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'Drawer/home_screen.dart';
 import 'PhuongAn2/Controller/Cart.dart';
-import 'PhuongAn2/Controller/favorite.dart';
-import 'Account/profile.dart';
+import 'Drawer/Favorite/favorite.dart';
+import 'Drawer/profile.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
-//import 'package:shopmeo/Account/login_screen.dart';
 import 'package:shopmeo/screens/cart_item.dart';
-//import 'package:shopmeo/services/auth_service.dart';
-//import 'nav.dart';
-import 'PhuongAn2/Provider/favorite_provider.dart';
+
+import 'Drawer/Favorite/favorite_provider.dart';
+
+import 'drawer.dart';
 import 'nav.dart';
 
 void main() async {
@@ -28,15 +28,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BottomNavBar(),
+      home: Drawers(),
       //LoginScreen(),
     );
   }
-  // Widget _getHomeScreen() {
-  //   if (AuthService().currentUser != null) {
-  //     return BottomNavBar();
-  //   } else {
-  //     return LoginScreen();
-  //   }
-  // }
+// Widget _getHomeScreen() {
+//   if (AuthService().currentUser != null) {
+//     return BottomNavBar();
+//   } else {
+//     return LoginScreen();
+//   }
+// }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../Tienich/contants.dart';
 import '../../details/details_screen.dart';
 import '../Models/product_models.dart';
-import '../Provider/favorite_provider.dart';
+import '../../Drawer/Favorite/favorite_provider.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 

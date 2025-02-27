@@ -22,7 +22,7 @@ class _NapcardState extends State<Napcard> {
       body: SafeArea(
         child: SingleChildScrollView( // Add SingleChildScrollView to allow scrolling
           child: Padding(
-            padding: const EdgeInsets.all(16.0), // Add padding to the overall content
+            padding: const EdgeInsets.all(10.0), // Add padding to the overall content
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -107,7 +107,9 @@ class _NapcardState extends State<Napcard> {
                     ),
                     child: const Text("Nạp thẻ",style: TextStyle(color: Colors.white),),
                   ),
-                )
+                ),
+                Text('Nạp qua ngân hàng'),
+                Image.asset("images/tech.jpg", height: 500, width: 500,),
               ],
             ),
           ),

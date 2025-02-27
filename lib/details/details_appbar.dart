@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../PhuongAn2/Models/product_models.dart';
-import '../PhuongAn2/Provider/favorite_provider.dart';
+import '../Drawer/Favorite/favorite_provider.dart';
 
 class DetailAppBar extends StatelessWidget {
   final Product product;
