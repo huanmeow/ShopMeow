@@ -7,7 +7,7 @@ class Bank extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nạp qua ngân hàng'), // Thêm Text vào title
+        title: const Text('Nạp qua ngân hàng với nội dung : ID (của bạn)'), // Thêm Text vào title
       ),
       body: SingleChildScrollView(
         child: SafeArea(

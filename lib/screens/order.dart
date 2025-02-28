@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../Drawer/home_screen.dart';
+import 'package:shopmeo/drawer.dart';
 
 class OrderSuccessScreen extends StatelessWidget {
   const OrderSuccessScreen({super.key});
@@ -30,10 +29,9 @@ class OrderSuccessScreen extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Chuyển hướng về trang chủ và xóa tất cả các màn hình trước đó
                 Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  MaterialPageRoute(builder: (context) => const Drawers()),
                       (route) => false,
                 );
               },

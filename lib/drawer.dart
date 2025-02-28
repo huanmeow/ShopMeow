@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopmeo/Account/login_screen.dart';
+import 'package:provider/provider.dart';
+import 'Provider/balance_privider.dart';
 import 'Drawer/changePass.dart';
 import 'Drawer/purchasehistory.dart';
 import 'Drawer/chinhsach.dart';
@@ -10,6 +11,7 @@ import 'PhuongAn2/Profile/contact.dart';
 import 'PhuongAn2/Profile/napcard.dart';
 import 'package:intl/intl.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'nav.dart';
 
 class Drawers extends StatefulWidget {
   const Drawers({super.key});
@@ -30,11 +32,13 @@ class _DrawersState extends State<Drawers> {
     ChangePasswordScreen(),
   ];
 
+  // Hàm đăng xuất
   Future<void> _signOut(BuildContext context) async {
     try {
       await FirebaseAuth.instance.signOut();
+      // Xóa tất cả các màn hình khỏi ngăn xếp điều hướng và chuyển đến màn hình đăng nhập
       Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(builder: (context) => const BottomNavBar()), // Thay thế LoginScreen() bằng màn hình đăng nhập của bạn
             (Route<dynamic> route) => false,
       );
     } catch (e) {
@@ -103,21 +107,24 @@ class _DrawersState extends State<Drawers> {
                         ),
                         const SizedBox(height: 5),
                         const Text(
-                          'ID: 123456', // Replace with your ID
+                          'ID: 4826', // Replace with your ID
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
                           ),
                         ),
                         const SizedBox(height: 5),
-                        Text(
-                          'Số tiền: ${NumberFormat.currency(locale: 'vi_VN', symbol: 'VND', decimalDigits: 0).format(1000000)}', // Replace with your amount
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                          ),
+                        Consumer<BalanceProvider>(
+                          builder: (context, balanceProvider, child) {
+                            return Text(
+                              'Số tiền: ${NumberFormat.currency(locale: 'vi_VN', symbol: 'VND', decimalDigits: 0).format(balanceProvider.balance)}',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            );
+                          },
                         ),
-                        const SizedBox(height: 10),
                       ],
                     ),
                     const CircleAvatar(

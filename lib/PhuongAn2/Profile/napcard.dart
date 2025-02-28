@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../Provider/top_up_history_provider.dart';
+import '../../Provider/balance_privider.dart';
 
 class Napcard extends StatefulWidget {
-  const Napcard({super.key});
+  const Napcard({Key? key}) : super(key: key);
 
   @override
   State<Napcard> createState() => _NapcardState();
@@ -10,8 +13,70 @@ class Napcard extends StatefulWidget {
 class _NapcardState extends State<Napcard> {
   String? selectedValue;
   String? selectedValue1;
-  List<String> items = ['Viettel', 'Vinaphone', 'Mobifone', 'Vietnamoblie'];
-  List<String> itemss = ['10.000', '20.000', '50.000', '100.000', '200.000', '500.000'];
+  List<String> items = [
+    'Viettel',
+    'Vinaphone',
+    'Mobifone',
+    'Vietnamoblie'
+  ];
+  List<String> itemss = [
+    '10.000',
+    '20.000',
+    '50.000',
+    '100.000',
+    '200.000',
+    '500.000'
+  ];
+  final _serialController = TextEditingController();
+  final _codeController = TextEditingController();
+
+  @override
+  void dispose() {
+    _serialController.dispose();
+    _codeController.dispose();
+    super.dispose();
+  }
+
+  void _handleTopUp(BuildContext context) {
+    // Lấy BalanceProvider và TopUpHistoryProvider từ context
+    final balanceProvider = Provider.of<BalanceProvider>(context, listen: false);
+    final topUpHistoryProvider = Provider.of<TopUpHistoryProvider>(context, listen: false);
+
+    // Lấy mệnh giá thẻ từ selectedValue1
+    String selectedAmount = selectedValue1 ?? '';
+    double topUpAmount = 0;
+
+    // Chuyển đổi mệnh giá thẻ thành số tiền
+    if (selectedAmount.isNotEmpty) {
+      topUpAmount = double.tryParse(selectedAmount.replaceAll('.', '')) ?? 0;
+    }
+
+    // Kiểm tra số tiền nạp có hợp lệ không
+    if (topUpAmount > 0) {
+      // Cộng tiền vào số dư
+      balanceProvider.updateBalance(balanceProvider.balance + topUpAmount);
+
+      // Thêm giao dịch vào lịch sử
+      topUpHistoryProvider.addTransaction(
+        TopUpTransaction(
+          dateTime: DateTime.now(),
+          amount: topUpAmount,
+          cardType: selectedValue ?? '', // Truyền loại thẻ vào
+          status: 'Thành công',
+        ),
+      );
+
+      // Thông báo thành công
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Nạp tiền thành công')),
+      );
+    } else {
+      // Thông báo thất bại
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Vui lòng chọn mệnh giá thẻ')),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +85,9 @@ class _NapcardState extends State<Napcard> {
         title: const Text(''),
       ),
       body: SafeArea(
-        child: SingleChildScrollView( // Add SingleChildScrollView to allow scrolling
+        child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0), // Add padding to the overall content
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -65,6 +130,7 @@ class _NapcardState extends State<Napcard> {
                 const Text("Serial: ", style: TextStyle(fontSize: 18)),
                 const SizedBox(height: 8.0),
                 TextFormField(
+                  controller: _serialController,
                   decoration: const InputDecoration(
                     hintText: "Nhập seriel thẻ",
                   ),
@@ -73,6 +139,7 @@ class _NapcardState extends State<Napcard> {
                 const Text("Mã thẻ: ", style: TextStyle(fontSize: 18)),
                 const SizedBox(height: 8.0),
                 TextFormField(
+                  controller: _codeController,
                   decoration: const InputDecoration(
                     hintText: "Nhập mã thẻ",
                   ),
@@ -91,6 +158,7 @@ class _NapcardState extends State<Napcard> {
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
+                                  _handleTopUp(context);
                                 },
                                 child: const Text("Đóng"),
                               ),
@@ -108,7 +176,7 @@ class _NapcardState extends State<Napcard> {
                     child: const Text("Nạp thẻ",style: TextStyle(color: Colors.white),),
                   ),
                 ),
-                Text('Nạp qua ngân hàng'),
+                const Text('Nạp qua ngân hàng'),
                 Image.asset("images/tech.jpg", height: 500, width: 500,),
               ],
             ),
